@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+body{background:#fff;}
+body,td,h1,h2,h3,h4,h5,div,p,li,ul,ol,dd,dt,section{margin:0;padding:0; font-size:13px; color:#333; line-height:1.6em; font-family: 'Noto Sans KR', sans-serif; font-weight:400; letter-spacing:-0.02em;}
+input,textarea,select,button{font-size:0.95em; font-family: 'Noto Sans KR', sans-serif;}
+.btn_fixed_top{top:10px;}
+.btn{height:30px; line-height:30px; font-size:1em; font-weight:normal;}
+.new_win .tbl_wrap{margin:0;}
+.new_win .new_win_con{padding:10px;}
+.tbl_head01 td{height:auto;}
+.btn_win02{position:absolute; top:15px; right:0; }
+#container{padding:10px; float:none; margin-top:50px;}
+#container_title{padding:0; padding-left:10px; top:0; font-weight:700;}
+#container_title1{font-size:1.5em; font-weight:700;}
+.container_wr{padding:0;}
+.btn_04{background-color:#044486; color:#fff;}

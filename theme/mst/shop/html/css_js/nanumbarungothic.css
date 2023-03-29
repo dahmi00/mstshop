@@ -1,0 +1,39 @@
+/* 
+	나눔 바른고딕 
+
+	기본 :font-family: 'Nanum Barun Gothic', sans-serif; font-weight:400; 
+	굵기에 따라 : font-weight만 조정 
+
+	2가지 굵기로 사용가능 : 400(Regular) , 700(Bold)
+
+*/
+
+
+@import url(https://cdn.rawgit.com/openhiun/hangul/14c0f6faa2941116bb53001d6a7dcd5e82300c3f/nanumbarungothic.css); 
+
+
+/* 위 nanumgothic.css CDN이 작동하지 않으면 주석풀것
+
+	@font-face {
+	  font-family: 'Nanum Barun Gothic';
+	  font-style: normal;
+	  font-weight: 400;
+	  src: local('Nanum Barun Gothic Regular'), local('Nanum Barun Gothic-Regular'), local('NanumBarunGothic Regular');
+	  src: url(./fonts/NanumBarun/NanumBarunGothic.eot);
+	  src: url(./fonts/NanumBarun/NanumBarunGothic.eot?#iefix) format('embedded-opentype'),
+		   url(./fonts/NanumBarun/NanumBarunGothic.woff) format('woff'),
+		   url(./fonts/NanumBarun/NanumBarunGothic.ttf) format('truetype');
+	}
+
+	@font-face {
+	  font-family: 'Nanum Barun Gothic';
+	  font-style: normal;
+	  font-weight: 700;
+	  src: local('Nanum Barun Gothic Bold'), local('Nanum Barun Gothic-Bold'), local('NanumBarunGothic Bold');
+	  src: url(./fonts/NanumBarun/NanumBarunGothicBold.eot);
+	  src: url(./fonts/NanumBarun/NanumBarunGothicBold.eot?#iefix) format('embedded-opentype'),
+		   url(./fonts/NanumBarun/NanumBarunGothicBold.woff) format('woff'),
+		   url(./fonts/NanumBarun/NanumBarunGothicBold.ttf) format('truetype');
+	}
+
+*/
