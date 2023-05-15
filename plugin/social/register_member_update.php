@@ -33,7 +33,7 @@ $mb_email       = isset($_POST['mb_email']) ? trim($_POST['mb_email']) : '';
 $mb_name        = isset($_POST['mb_name']) ? clean_xss_tags(trim(strip_tags($_POST['mb_name']))) : '';
 $mb_hp          = isset($_POST['mb_hp']) ? trim($_POST['mb_hp']) : '';
 $mb_email       = get_email_address($mb_email);
-
+$mb_hp          = isset($_POST['mb_hp']) ? trim($_POST['mb_hp']) : "";
 // 이름, 닉네임에 utf-8 이외의 문자가 포함됐다면 오류
 // 서버환경에 따라 정상적으로 체크되지 않을 수 있음.
 $tmp_mb_name = iconv('UTF-8', 'UTF-8//IGNORE', $mb_name);
@@ -157,6 +157,7 @@ $sql = " insert into {$g5['member_table']}
                 mb_nick = '{$mb_nick}',
                 mb_nick_date = '".G5_TIME_YMD."',
                 mb_email = '{$mb_email}',
+                mb_hp = '{$mb_hp}',
                 mb_email_certify = '".$mb_email_certify."',
                 mb_today_login = '".G5_TIME_YMDHIS."',
                 mb_datetime = '".G5_TIME_YMDHIS."',

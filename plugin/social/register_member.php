@@ -22,7 +22,7 @@ if( ! $user_profile ){
 // 소셜 가입된 내역이 있는지 확인 상수 G5_SOCIAL_DELETE_DAY 관련
 $is_exists_social_account = social_before_join_check($url);
 
-$user_nick = social_relace_nick($user_profile->displayName);
+$user_nick = "$user_profile->username";
 $user_email = isset($user_profile->emailVerified) ? $user_profile->emailVerified : $user_profile->email;
 $user_id = $user_profile->sid ? preg_replace("/[^0-9a-z_]+/i", "", $user_profile->sid) : get_social_convert_id($user_profile->identifier, $provider_name);
 $user_phone = $user_profile->phone;
@@ -38,7 +38,7 @@ $user_id = exist_mb_id_recursive($user_id);
 $user_nick = exist_mb_nick_recursive($user_nick, '');
 $is_exists_email = $user_email ? exist_mb_email($user_email, '') : false;
 $user_name = isset($user_profile->username) ? $user_profile->username : ''; 
-
+$user_mobile = isset($user_profile->mobile) ? $user_profile->mobile : '1'; 
 // 불법접근을 막도록 토큰생성
 $token = md5(uniqid(rand(), true));
 set_session("ss_token", $token);

@@ -36,6 +36,11 @@ header("Pragma: no-cache"); // HTTP/1.0
 <head>
 <meta charset="utf-8">
 <meta name="viewport" id="meta_viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=10">
+<meta property="og:type" content="website"> 
+<meta property="og:title" content="MST 쇼핑몰">
+<meta property="og:description" content="MST, 봄내다살이, 수라다, 양우바이오, 컴포어">
+<meta property="og:image" content="/img/mstshop_thum.jpeg">
+<meta property="og:url" content="http://mstshop.dahmi.co.kr/">
 <?php
 if (G5_IS_MOBILE) {
     echo '<meta name="viewport" id="meta_viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=10">'.PHP_EOL;

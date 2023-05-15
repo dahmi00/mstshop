@@ -19,10 +19,10 @@ if ($config['cf_cert_use'] && ($config['cf_cert_simple'] || $config['cf_cert_ipi
 	<input type="hidden" name="cert_type" value="<?php echo $member['mb_certify']; ?>">
 	<input type="hidden" name="cert_no" value="">
 	<?php if (isset($member['mb_sex'])) {  ?><input type="hidden" name="mb_sex" value="<?php echo $member['mb_sex'] ?>"><?php }  ?>
-	<?php if (isset($member['mb_nick_date']) && $member['mb_nick_date'] > date("Y-m-d", G5_SERVER_TIME - ($config['cf_nick_modify'] * 86400))) { // 닉네임수정일이 지나지 않았다면  ?>
+	<!--<?php if (isset($member['mb_nick_date']) && $member['mb_nick_date'] > date("Y-m-d", G5_SERVER_TIME - ($config['cf_nick_modify'] * 86400))) { // 닉네임수정일이 지나지 않았다면  ?>
 	<input type="hidden" name="mb_nick_default" value="<?php echo get_text($member['mb_nick']) ?>">
 	<input type="hidden" name="mb_nick" value="<?php echo get_text($member['mb_nick']) ?>">
-	<?php }  ?>
+	<?php }  ?>-->
 	
 	<div id="register_form" class="form_01">   
 	    <div class="register_form_inner">
@@ -98,7 +98,7 @@ if ($config['cf_cert_use'] && ($config['cf_cert_simple'] || $config['cf_cert_ipi
 	                <label for="reg_mb_name">이름 (필수)<?php echo $desc_name ?></label>
 	                <input type="text" id="reg_mb_name" name="mb_name" value="<?php echo get_text($member['mb_name']) ?>" <?php echo $required ?> <?php echo $readonly; ?> class="frm_input full_input <?php echo $required ?> <?php echo $name_readonly ?>" size="10" placeholder="이름">
 	            </li>
-	            <?php if ($req_nick) {  ?>
+	            <!--<?php if ($req_nick) {  ?>
 	            <li>
 	                <label for="reg_mb_nick">
 	                	닉네임 (필수)
@@ -110,7 +110,7 @@ if ($config['cf_cert_use'] && ($config['cf_cert_simple'] || $config['cf_cert_ipi
                     <input type="text" name="mb_nick" value="<?php echo isset($member['mb_nick'])?get_text($member['mb_nick']):''; ?>" id="reg_mb_nick" required class="frm_input required nospace full_input" size="10" maxlength="20" placeholder="닉네임">
                     <span id="msg_mb_nick"></span>	                
 	            </li>
-	            <?php }  ?>
+	            <?php }  ?>-->
 	
 	            <li>
 	                <label for="reg_mb_email">E-mail (필수)
@@ -429,14 +429,14 @@ function fregisterform_submit(f)
     <?php } ?>
 
     // 닉네임 검사
-    if ((f.w.value == "") || (f.w.value == "u" && f.mb_nick.defaultValue != f.mb_nick.value)) {
-        var msg = reg_mb_nick_check();
-        if (msg) {
-            alert(msg);
-            f.reg_mb_nick.select();
-            return false;
-        }
-    }
+    //if ((f.w.value == "") || (f.w.value == "u" && f.mb_nick.defaultValue != f.mb_nick.value)) {
+    //   var msg = reg_mb_nick_check();
+    //    if (msg) {
+    //        alert(msg);
+    //        f.reg_mb_nick.select();
+    //        return false;
+    //    }
+    //}
 
     // E-mail 검사
     if ((f.w.value == "") || (f.w.value == "u" && f.mb_email.defaultValue != f.mb_email.value)) {

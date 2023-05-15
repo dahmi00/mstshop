@@ -110,19 +110,33 @@ $email_msg = $is_exists_email ? '등록할 이메일이 중복되었습니다.�
                         }
                         ?>
                     </li>
-                    <?php if ($req_nick) {  ?>
-                        <li>
+                    <li>
                             <label for="reg_mb_nick">
-                                닉네임 (필수)
-                                <button type="button" class="tooltip_icon"><i class="fa fa-question-circle-o" aria-hidden="true"></i><span class="sound_only">설명보기</span></button>
-                                <span class="tooltip">공백없이 한글,영문,숫자만 입력 가능 (한글2자, 영문4자 이상)<br> 닉네임을 바꾸시면 앞으로 <?php echo (int)$config['cf_nick_modify'] ?>일 이내에는 변경 할 수 없습니다.</span>
+                                이름 (필수)
                             </label>
-
-                            <input type="hidden" name="mb_nick_default" value="<?php echo isset($user_nick) ? get_text($user_nick) : ''; ?>">
-                            <input type="text" name="mb_nick" value="<?php echo isset($user_nick) ? get_text($user_nick) : ''; ?>" id="reg_mb_nick" required class="frm_input required nospace full_input" size="10" maxlength="20" placeholder="닉네임">
-                            <span id="msg_mb_nick"></span>
+                            <?php if($provider_name == 'Kakao'){?>
+                                <input type="hidden" name="mb_name_default">
+                                <input type="text" name="mb_name" id="reg_mb_name" required class="frm_input required nospace full_input" size="10" maxlength="20" placeholder="이름">
+                         
+                            <?} else {?>
+                            <input type="hidden" name="mb_name_default">
+                            <input type="text" name="mb_name" readonly id="reg_mb_name"value="<?php echo isset($user_nick) ? get_text($user_nick) : ''; ?>" required class="frm_input required nospace full_input" size="10" maxlength="20" placeholder="이름">
+                            <?}?>
                         </li>
-                    <?php }  ?>
+                    <li>
+                            <label for="mb_hp">
+                                핸드폰 (필수)
+                            </label>
+                            <?php if($provider_name == 'Kakao'){?>
+                                <input type="hidden" name="mb_hp_default">
+                                <input type="text" name="mb_hp" id="mb_hp" required class="frm_input required nospace full_input" size="10" maxlength="20" placeholder="핸드폰">
+                         
+                            <?} else {?>
+                                <input type="hidden" name="mb_hp_default">
+                                <input type="text" name="mb_hp" readonly id="mb_hp"value="<?php echo isset($user_mobile) ? get_text($user_mobile) : ''; ?>" required class="frm_input required nospace full_input" size="10" maxlength="20" placeholder="핸드폰">
+                            <?}?>
+                            
+                    </li>
                     <li>
                         <label for="reg_mb_email">E-mail (필수)
 

@@ -89,10 +89,10 @@ if ($w == '' || $w == 'u') {
     if($tmp_mb_name != $mb_name) {
         alert('이름을 올바르게 입력해 주십시오.');
     }
-    $tmp_mb_nick = iconv('UTF-8', 'UTF-8//IGNORE', $mb_nick);
-    if($tmp_mb_nick != $mb_nick) {
-        alert('닉네임을 올바르게 입력해 주십시오.');
-    }
+    //$tmp_mb_nick = iconv('UTF-8', 'UTF-8//IGNORE', $mb_nick);
+    //if($tmp_mb_nick != $mb_nick) {
+    //    alert('닉네임을 올바르게 입력해 주십시오.');
+    //}
 
     // 비밀번호를 체크하는 상태의 기본값은 true이며, 비밀번호를 체크하지 않으려면 hook 을 통해 false 값으로 바꿔야 합니다.
     $is_check_password = run_replace('register_member_password_check', true, $mb_id, $mb_nick, $mb_email, $w);
@@ -105,13 +105,13 @@ if ($w == '' || $w == 'u') {
     }
 
     if ($msg = empty_mb_name($mb_name))       alert($msg, "", true, true);
-    if ($msg = empty_mb_nick($mb_nick))     alert($msg, "", true, true);
+    //if ($msg = empty_mb_nick($mb_nick))     alert($msg, "", true, true);
     if ($msg = empty_mb_email($mb_email))   alert($msg, "", true, true);
     if ($msg = reserve_mb_id($mb_id))       alert($msg, "", true, true);
     if ($msg = reserve_mb_nick($mb_nick))   alert($msg, "", true, true);
     // 이름에 한글명 체크를 하지 않는다.
     //if ($msg = valid_mb_name($mb_name))     alert($msg, "", true, true);
-    if ($msg = valid_mb_nick($mb_nick))     alert($msg, "", true, true);
+    //if ($msg = valid_mb_nick($mb_nick))     alert($msg, "", true, true);
     if ($msg = valid_mb_email($mb_email))   alert($msg, "", true, true);
     if ($msg = prohibit_mb_email($mb_email))alert($msg, "", true, true);
 
@@ -123,9 +123,9 @@ if ($w == '' || $w == 'u') {
     if ($w=='') {
         if ($msg = exist_mb_id($mb_id))     alert($msg);
 
-        if (get_session('ss_check_mb_id') != $mb_id || get_session('ss_check_mb_nick') != $mb_nick || get_session('ss_check_mb_email') != $mb_email) {
+        if (get_session('ss_check_mb_id') != $mb_id || get_session('ss_check_mb_email') != $mb_email) {
             set_session('ss_check_mb_id', '');
-            set_session('ss_check_mb_nick', '');
+            //set_session('ss_check_mb_nick', '');
             set_session('ss_check_mb_email', '');
 
             alert('올바른 방법으로 이용해 주십시오.');
@@ -149,15 +149,15 @@ if ($w == '' || $w == 'u') {
     } else {
         // 자바스크립트로 정보변경이 가능한 버그 수정
         // 닉네임수정일이 지나지 않았다면
-        if ($member['mb_nick_date'] > date("Y-m-d", G5_SERVER_TIME - ($config['cf_nick_modify'] * 86400)))
-            $mb_nick = $member['mb_nick'];
+        //if ($member['mb_nick_date'] > date("Y-m-d", G5_SERVER_TIME - ($config['cf_nick_modify'] * 86400)))
+        //    $mb_nick = $member['mb_nick'];
         // 회원정보의 메일을 이전 메일로 옮기고 아래에서 비교함
-        $old_email = $member['mb_email'];
+        //$old_email = $member['mb_email'];
     }
 
     run_event('register_form_update_valid', $w, $mb_id, $mb_nick, $mb_email);
 
-    if ($msg = exist_mb_nick($mb_nick, $mb_id))     alert($msg, "", true, true);
+    //if ($msg = exist_mb_nick($mb_nick, $mb_id))     alert($msg, "", true, true);
     if ($msg = exist_mb_email($mb_email, $mb_id))   alert($msg, "", true, true);
 }
 

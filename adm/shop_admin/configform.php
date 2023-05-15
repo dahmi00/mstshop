@@ -348,7 +348,7 @@ if(!$default['de_kakaopay_cancelpwd']){
         </colgroup>
         <tbody>
         <tr>
-            <th scope="row">히트상품출력</th>
+            <th scope="row">브랜드상품출력</th>
             <td>
                 <label for="de_type1_list_use">출력</label>
                 <input type="checkbox" name="de_type1_list_use" value="1" id="de_type1_list_use" <?php echo $default['de_type1_list_use']?"checked":""; ?>>
@@ -366,7 +366,7 @@ if(!$default['de_kakaopay_cancelpwd']){
                 <input type="text" name="de_type1_img_height" value="<?php echo get_sanitize_input($default['de_type1_img_height']); ?>" id="de_type1_img_height" class="frm_input" size="3">
             </td>
         </tr>
-        <tr>
+        <!--<tr>
             <th scope="row">추천상품출력</th>
             <td>
                 <label for="de_type2_list_use">출력</label>
@@ -384,7 +384,7 @@ if(!$default['de_kakaopay_cancelpwd']){
                 <label for="de_type2_img_height">이미지 높이</label>
                 <input type="text" name="de_type2_img_height" value="<?php echo get_sanitize_input($default['de_type2_img_height']); ?>" id="de_type2_img_height" class="frm_input" size="3">
             </td>
-        </tr>
+        </tr>-->
         <tr>
             <th scope="row">최신상품출력</th>
             <td>
@@ -423,7 +423,7 @@ if(!$default['de_kakaopay_cancelpwd']){
                 <input type="text" name="de_type4_img_height" value="<?php echo get_sanitize_input($default['de_type4_img_height']); ?>" id="de_type4_img_height" class="frm_input" size="3">
             </td>
         </tr>
-        <tr>
+        <!--<tr>
             <th scope="row">할인상품출력</th>
             <td>
                 <label for="de_type5_list_use">출력</label>
@@ -441,7 +441,7 @@ if(!$default['de_kakaopay_cancelpwd']){
                 <label for="de_type5_img_height">이미지 높이</label>
                 <input type="text" name="de_type5_img_height" value="<?php echo get_sanitize_input($default['de_type5_img_height']); ?>" id="de_type5_img_height" class="frm_input" size="3">
             </td>
-        </tr>
+        </tr>-->
         </tbody>
         </table>
     </div>

@@ -79,7 +79,7 @@
 #reg_result #result_email span {display:inline-block;width:150px}
 #reg_result #result_email strong {color:#e8180c;font-size:1.2em}
 #reg_result p {line-height:1.8em}
-#reg_result .result_txt {text-align:left}
+#reg_result .result_txt {}
 #reg_result .btn_confirm {margin:50px 0}
 #reg_result i {font-size:3em}
 #reg_result .reg_result_p {font-size:1.25em;margin:0 0 10px;color:#3684fa}

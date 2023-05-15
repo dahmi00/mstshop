@@ -119,6 +119,7 @@ class Hybrid_Providers_Naver extends Hybrid_Provider_Model_OAuth2
         $this->user->profile->identifier    = (array_key_exists('id',$data))?$data['id']:"";
         $this->user->profile->age           = (array_key_exists('age',$data))?$data['age']:"";
         $this->user->profile->username = (array_key_exists('name', $data)) ? $data['name'] : "";
+        $this->user->profile->mobile = (array_key_exists('mobile', $data)) ? $data['mobile'] : "";
         /*
         if( array_key_exists('email',$data) ){
             $tmp = explode("@", $data['email']);

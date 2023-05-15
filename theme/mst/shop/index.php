@@ -162,31 +162,7 @@ include_once(G5_THEME_SHOP_PATH.'/shop.head.php');
 		파일위치 : 루트/theme/테마폴더/skin/shop/daon/main.10.daon.skin.php
 	*/
 ?>
-<?php if($default['de_type2_list_use']) { ?>
-<!-- 추천상품 시작 { -->
-<!--section class="sct_wrap">
-	<header>
-		<h2><a href="<?php echo shop_type_url('2'); ?>">BEST ITEMS</a><?php if($is_admin){?>&nbsp;<a href="<?php echo G5_ADMIN_URL ?>/shop_admin/configform.php#anc_scf_index" class="btn_admin btn btn_admin_dt"><i class="fa fa-cog fa-spin fa-fw"></i>진열수정</a><a href="<?php echo G5_ADMIN_URL ?>/shop_admin/itemtypelist.php" class="btn_admin btn btn_admin_dt"><i class="fa fa-cog fa-spin fa-fw"></i>상품변경</a><?php }?></h2>
-		<p>일년내내 인기있는 베스트 상품</p>
-	</header>
-	<?php
-	 //세일퍼센트 아이콘은 it_cust_price 와 it_price 가 둘다 true일때 나타납니다.
-	$list = new item_list();
-	$list->set_type(2);
-	//$list->set_category("40");	//특정카테고리만 사용시 40 대신 카테고리 코드를 입력
-	$list->set_view('it_id', false);
-	$list->set_view('it_name', true);
-	$list->set_view('it_basic', true);
-	$list->set_view('it_cust_price', true);
-	$list->set_view('it_price', true);
-	$list->set_view('it_icon', true);
-	$list->set_view('sns', true);
-	$list->set_view('star', true);
-	echo $list->run();
-	?>
-</section-->
-<!-- } 추천상품 끝 -->
-<?php } ?>
+
 
 </div>
 
@@ -254,7 +230,7 @@ include_once(G5_THEME_SHOP_PATH.'/shop.head.php');
 	//상품의 순위는 상품등록의 출력순서에 따릅니다.
 	$list = new item_list();
 	$list->set_type(4);	
-	//$list->set_category("40");	//특정카테고리만 사용시 40 대신 카테고리 코드를 입력
+	//$list->set_category("40");	//특정카테고리만 사용시 40 대신 카테고리 코드를 입력x
 	$list->set_view('it_id', false);
 	$list->set_view('it_name', true);
 	$list->set_view('it_basic', true);

@@ -684,7 +684,7 @@ background:url('img/select_arrow.png') no-repeat 96% 50%/* 화살표 아이콘 �
 #sit_inf h3 {position:absolute;font-size:0;line-height:0;content:""}
 
 #sit_inf_basic {margin:0 0 20px;line-height:1.7em}
-#sit_inf_explan {margin:0 0 10px;width:auto !important;line-height:1.7em;overflow:hidden} /* ie6 미대응시 #sit_inf_explan {margin:0 0 10px} 만으로 충분 */
+#sit_inf_explan {margin:0 0 10px;width:auto !important;line-height:1.7em;overflow:hidden; text-align:center} /* ie6 미대응시 #sit_inf_explan {margin:0 0 10px} 만으로 충분 */
 #sit_inf_explan img {max-width:100%;height:auto}
 
 #sit_inf_open {width:100%;border:0;border-top:1px solid #777;border-collapse:collapse}
