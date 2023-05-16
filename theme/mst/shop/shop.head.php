@@ -196,7 +196,12 @@ if(!defined('G5_IS_SHOP_AJAX_LIST') && $config['cf_kakao_js_apikey']) { ?>
             <li class="tnb_admin"><a href="<?php echo G5_ADMIN_URL; ?>/shop_admin/"><b>관리자</b></a></li>
             <?php }  ?>
             <?php } else { ?>
-            <li><a href="<?php echo G5_BBS_URL; ?>/register.php">회원가입</a></li>
+			<li style="position:relative"><a href="<?php echo G5_BBS_URL; ?>/register.php">회원가입</a>
+				<div class="join_point">						
+					<span class="arrow">▲</span>
+					<p>+ 1,000 포인트<br>+ 4,000 쿠폰</p>
+				</div>
+			</li>
             <li><a href="<?php echo G5_BBS_URL; ?>/login.php?url=<?php echo $urlencode; ?>"><b>로그인</b></a></li>
             <?php } ?>
         </ul>
