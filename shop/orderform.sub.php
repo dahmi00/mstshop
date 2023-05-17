@@ -279,11 +279,11 @@ if($is_kakaopay_use) {
                 <?php } ?>
 
                 <tr>
-                    <th scope="row"><label for="od_tel">전화번호<strong class="sound_only"> 필수</strong></label></th>
+                    <th scope="row"><label for="od_tel">전화번호</label></th>
                     <td><input type="text" name="od_tel" value="<?php echo get_text($member['mb_tel']); ?>" id="od_tel" required class="frm_input required" maxlength="20"></td>
                 </tr>
                 <tr>
-                    <th scope="row"><label for="od_hp">핸드폰</label></th>
+                    <th scope="row"><label for="od_hp">핸드폰<strong class="sound_only"> 필수</strong></label></th>
                     <td><input type="text" name="od_hp" value="<?php echo get_text($member['mb_hp']); ?>" id="od_hp" class="frm_input" maxlength="20"></td>
                 </tr>
                 <tr>
@@ -406,11 +406,11 @@ if($is_kakaopay_use) {
                     <td><input type="text" name="od_b_name" id="od_b_name" required class="frm_input required" maxlength="20"></td>
                 </tr>
                 <tr>
-                    <th scope="row"><label for="od_b_tel">전화번호<strong class="sound_only"> 필수</strong></label></th>
+                    <th scope="row"><label for="od_b_tel">전화번호</label></th>
                     <td><input type="text" name="od_b_tel" id="od_b_tel" required class="frm_input required" maxlength="20"></td>
                 </tr>
                 <tr>
-                    <th scope="row"><label for="od_b_hp">핸드폰</label></th>
+                    <th scope="row"><label for="od_b_hp">핸드폰<strong class="sound_only"> 필수</strong></label></th>
                     <td><input type="text" name="od_b_hp" id="od_b_hp" class="frm_input" maxlength="20"></td>
                 </tr>
                 <tr>
@@ -1244,7 +1244,7 @@ function forderform_check(f)
         if( (f.od_pwd.value.length<3) || (f.od_pwd.value.search(/([^A-Za-z0-9]+)/)!=-1) )
             error_field(f.od_pwd, "회원이 아니신 경우 주문서 조회시 필요한 비밀번호를 3자리 이상 입력해 주십시오.");
     }
-    check_field(f.od_tel, "주문하시는 분 전화번호를 입력하십시오.");
+    check_field(f.od_hp, "주문하시는 분 핸드폰번호를 입력하십시오.");
     check_field(f.od_addr1, "주소검색을 이용하여 주문하시는 분 주소를 입력하십시오.");
     //check_field(f.od_addr2, " 주문하시는 분의 상세주소를 입력하십시오.");
     check_field(f.od_zip, "");
@@ -1261,7 +1261,7 @@ function forderform_check(f)
     }
 
     check_field(f.od_b_name, "받으시는 분 이름을 입력하십시오.");
-    check_field(f.od_b_tel, "받으시는 분 전화번호를 입력하십시오.");
+    check_field(f.od_b_hp, "받으시는 분 핸드폰번호를 입력하십시오.");
     check_field(f.od_b_addr1, "주소검색을 이용하여 받으시는 분 주소를 입력하십시오.");
     //check_field(f.od_b_addr2, "받으시는 분의 상세주소를 입력하십시오.");
     check_field(f.od_b_zip, "");
