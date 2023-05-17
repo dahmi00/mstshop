@@ -140,6 +140,36 @@ border:1px solid #558ab7 !important;
 
 @keyframes join_point {0% {top:33px;} 50% {top:38px;} 100% {top:33px;}}
 
+@media (max-width: 480px) {/* 상단 가입포인트 */
+.join_point {
+    position: absolute;
+    top: 40px;
+    margin-left: -30px;
+    display: inline-block;
+    min-width: 70px;
+    height: 35px;
+    line-height: 12px;
+    border-radius: 5px;
+    background: #333;
+    text-align: center;
+    font-size: 10px;
+    color: #fff;
+    animation: join_point 1s linear infinite;
+    z-index: 999;
+  }
+  .join_point p {font-size:10px; color:#fff; line-height:12px; margin:5px 0 0 0}
+  
+  .join_point .arrow {
+    position: absolute;
+    top: -9px;
+    left: 30%;
+    margin-left: 5px;
+    color: #333;
+  }
+  
+  @keyframes join_point {0% {top:36px;} 50% {top:41px;} 100% {top:36px;}}
+  
+}
 /*사이드 메뉴*/
 #side_menu {height:100%;position:fixed;top:0;right:0;background:#fff;border-left:1px solid #e5e7ea;z-index:120;padding-left:50px;-webkit-box-shadow:0 1px 5px #d6d6d6;
 -moz-box-shadow:0 1px 5px #d6d6d6;

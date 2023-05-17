@@ -105,7 +105,12 @@ if(!defined('G5_IS_SHOP_AJAX_LIST') && $config['cf_kakao_js_apikey']) { ?>
         <li><a href="<?php echo G5_BBS_URL; ?>/logout.php?url=shop">로그아웃</a></li>
         <?php } else { ?>
         <li><a href="<?php echo G5_BBS_URL; ?>/login.php?url=<?php echo $urlencode; ?>">로그인</a></li>
-        <li><a href="<?php echo G5_BBS_URL ?>/register.php" id="snb_join">회원가입</a></li>
+        <li style="position:relative; z-index:999"><a href="<?php echo G5_BBS_URL ?>/register.php" id="snb_join">회원가입</a>
+            <div class="join_point">						
+                <span class="arrow">▲</span>
+                <p>+ 1,000 포인트<br>+ 4,000 쿠폰</p>
+            </div>
+        </li>
         <?php } ?>
         <li><a href="<?php echo G5_SHOP_URL; ?>/mypage.php">마이쇼핑</a></li>
 		<li><a href="<?php echo G5_BBS_URL; ?>/qawrite.php">1:1문의</a></li>
@@ -196,7 +201,7 @@ if(!defined('G5_IS_SHOP_AJAX_LIST') && $config['cf_kakao_js_apikey']) { ?>
             <li class="tnb_admin"><a href="<?php echo G5_ADMIN_URL; ?>/shop_admin/"><b>관리자</b></a></li>
             <?php }  ?>
             <?php } else { ?>
-			<li style="position:relative"><a href="<?php echo G5_BBS_URL; ?>/register.php">회원가입</a>
+            <li style="position:relative"><a href="<?php echo G5_BBS_URL; ?>/register.php">회원가입</a>
 				<div class="join_point">						
 					<span class="arrow">▲</span>
 					<p>+ 1,000 포인트<br>+ 4,000 쿠폰</p>
