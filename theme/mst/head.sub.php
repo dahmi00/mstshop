@@ -105,6 +105,15 @@ if(!defined('G5_IS_ADMIN'))
 ?>
 </head>
 <body<?php echo isset($g5['body_script']) ? $g5['body_script'] : ''; ?>>
+
+<script>
+  (function(){var w=window;if(w.ChannelIO){return w.console.error("ChannelIO script included twice.");}var ch=function(){ch.c(arguments);};ch.q=[];ch.c=function(args){ch.q.push(args);};w.ChannelIO=ch;function l(){if(w.ChannelIOInitialized){return;}w.ChannelIOInitialized=true;var s=document.createElement("script");s.type="text/javascript";s.async=true;s.src="https://cdn.channel.io/plugin/ch-plugin-web.js";var x=document.getElementsByTagName("script")[0];if(x.parentNode){x.parentNode.insertBefore(s,x);}}if(document.readyState==="complete"){l();}else{w.addEventListener("DOMContentLoaded",l);w.addEventListener("load",l);}})();
+
+    ChannelIO('boot', {
+        "pluginKey": "d71e9147-2cfc-474e-a042-6bf3a758bb4e" // fill your plugin key
+    });
+</script>
+
 <?php 
 if(!defined('G5_IS_ADMIN')){
 	if (defined('_SHOP_') && !G5_IS_MOBILE) {
